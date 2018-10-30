@@ -1,0 +1,12 @@
+{% extends "appsix/base.html" %}
+{% block body_block %}
+  <h1>This is Index</h1>
+  <form action="{% url 'appsix:user_login' %}" method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" placeholder="enter username">
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+    <input type="submit" value="login">
+  </form>
+{% endblock %}
